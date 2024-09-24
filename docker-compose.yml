@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: my-money-backend
+    ports:
+      - "3003:3003"
+    environment:
+      NODE_ENV: production
+      MONGO_URL: mongodb://mongo:27017/mymoney
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - mongo
+    command: npm run dev
+
+  mongo:
+    image: mongo:latest
+    container_name: my-money-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
