@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
 const parseErrors = (nodeRestfulErrors) => {
     const errors = [];
 
-    //os errors é um objeto que retorna atualmente essa interação é o que permite pegar a mensagem de erro
+    //os errors é um objeto que retorna atualmente essa iteração é o que permite pegar a mensagem de erro
     _.forIn(nodeRestfulErrors, error => errors.push(error.message));
     return errors;
 }
