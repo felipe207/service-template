@@ -3,12 +3,12 @@ version: '3.8'
 services:
   app:
     build: .
-    container_name: my-money-backend
+    container_name: service-template
     ports:
       - "3003:3003"
     environment:
       NODE_ENV: production
-      MONGO_URL: mongodb://mongo:27017/mymoney
+      MONGO_URL: mongodb://mongo:27017/servicetemplate
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
@@ -18,7 +18,7 @@ services:
 
   mongo:
     image: mongo:latest
-    container_name: my-money-mongo
+    container_name: service-template-mongo
     ports:
       - "27017:27017"
     volumes:

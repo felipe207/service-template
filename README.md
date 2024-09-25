@@ -1,8 +1,6 @@
-# my-money-app-backend
+# service-template
 
 # ordem de execução
-
-
 
 ## 1.loader (required:database,server e routes da config)
 
@@ -11,3 +9,7 @@
 
 ## após rodar o docker-compose up entrar no bash do conteiner com 
 ## docker exec -it <id> bash e executar npm install jsonwebtoken
+
+## para criar rotas novas tu vai no src/routes
+
+## aqui a parada nãi é MVC então vê o padrão do projeto e segue

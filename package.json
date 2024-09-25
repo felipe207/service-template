@@ -1,12 +1,12 @@
 {
-  "name": "my-money-backend",
+  "name": "service-template",
   "version": "1.0.0",
   "main": "src/loader.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "production": "pm2 start src/loader.js --name my-money-backend",
-    "stop": "pm2 delete my-money-backend"
+    "production": "pm2 start src/loader.js --name service-template",
+    "stop": "pm2 delete service-template"
   },
   "keywords": [],
   "author": "",
