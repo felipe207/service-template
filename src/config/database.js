@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 // module.exports = mongoose.connect('mongodb://localhost:27017/', { useNewUrlParser: true });
-
-// const dbURL = 'mongodb://127.0.0.1:27017/mymoney';  
-const dbURL = process.env.MONGO_URL || 'mongodb://l127.0.0.1:27017/mymoney';
+ 
+const dbURL = process.env.MONGO_URL || 'mongodb://l127.0.0.1:27017/servicetemplate';
 
 mongoose.connect(dbURL, { useNewUrlParser: true})
   .then(() => console.log('Conectado ao MongoDB com sucesso'))

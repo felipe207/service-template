@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const Users = require('./users')
 const env = require('../../.env')
-// const env = require('../.env')
 const emailRegex = /\S+@\S+\.\S+/
 const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
 const crypto = require('crypto');
@@ -85,7 +84,6 @@ const signup = async (req, res, next) => {
         }
     } catch (err) {
         console.log('erro:',err);
-        // console.log('res:',res);
         return sendErrorsFromDB(res, err);
     }
 };
